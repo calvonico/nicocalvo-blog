@@ -6,10 +6,11 @@
 
 module.exports = {
   siteName: 'El Blog de Nico Calvo',
-  siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
+  siteDescription: 'Un lugar para hablar de diseño, código e internet.',
+  siteUrl: 'https://blog.nicocalvo.com',
 
   templates: {
-    Post: '/:title',
+    Post: '/post/:year/:month/:title',
     Tag: '/tag/:id'
   },
 
@@ -30,6 +31,23 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        exclude: ['/exclude-me'],
+        config: {
+          '/articles/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+          '/about': {
+            changefreq: 'monthly',
+            priority: 0.7
+          }
+        }
+      }
+    },
+    /*{
       use: '@gridsome/source-strapi',
       options: {
         apiURL: 'http://localhost:1337',
@@ -42,8 +60,9 @@ module.exports = {
           password: 'uiMjk_74R$6-XSS'
         }
       }
-    }
+    }*/
   ],
+
 
   transformers: {
     //Add markdown support to all file-system sources

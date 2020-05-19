@@ -11,9 +11,13 @@
       </div>
     </header>
 
+    <transition name="fade" appear>
+
     <main class="main">
       <slot/>
     </main>
+
+    </transition> 
 
     <footer class="footer">
       <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }} <a href="//nicocalvo.com">Nico Calvo</a></span> | 
@@ -26,6 +30,7 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import ToggleTheme from '~/components/ToggleTheme.vue'
+//import Header from './partials/Header.vue'
 
 export default {
   props: {
@@ -81,5 +86,13 @@ export default {
   a {
     color: currentColor;
   }
+}
+
+.fade-enter-active {
+  transition: opacity .5s;
+}
+
+.fade-enter {
+  opacity: 0;
 }
 </style>

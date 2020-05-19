@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
+    "@gridsome/plugin-sitemap": "^0.2.3",
     "@gridsome/remark-prismjs": "^0.2.0",
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/source-strapi": "^0.1.0",
@@ -15,6 +16,7 @@
     "gridsome": "^0.7.0"
   },
   "devDependencies": {
+    "gridsome-plugin-tailwindcss": "^2.2.48",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0"
   }

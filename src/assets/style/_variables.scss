@@ -10,7 +10,7 @@ body {
  	--bg-code: #fffbf3;
  	--body-color: #444;
  	--title-color: #111;
- 	--link-color: #6b17e6;
+ 	--link-color: #339a99;
  	--border-color:  rgba(0,0,0,.1);;
   --space: 3.5rem;
   --content-width: 860px;
@@ -38,5 +38,22 @@ body[data-theme="dark"] {
  	--border-color:  rgba(255,255,255,.1);;
  	--body-color: #ced8de;
  	--title-color: #fff;
- 	--link-color: #af9cef;
+	--link-color: #339a99;
+	--github-blanco: #ffffff; 
+}
+
+body[data-theme="sepia"] {
+	--bg-color: #f1e7d0;
+	--bg-content-color: #eee7d9;
+    --body-color: #444;
+	--bg: #f1e7d0;
+	--title-color: #433422;
+    --dark-bg: #111;
+    --code-bg: #222;
+    --bg-transparent: #f1e7d0E1;
+    --bg-secondary: #eae0c9;
+    --bg-teritary: #eadec2;
+    --border-color: #ded0bf;
+    --border-color-darker: #ccbca9;
+    --glow: 2px 2px 15px 0 #ccbca9;
 }
